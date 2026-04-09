@@ -1,0 +1,7 @@
+@import "../../index.css";
+
+@layer components {
+  .home-page {
+    @apply relative;
+  }
+}

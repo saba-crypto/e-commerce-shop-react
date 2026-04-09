@@ -1,0 +1,38 @@
+@import "../../../index.css";
+
+@layer components {
+  .end-of-site {
+    @apply bottom-0 mt-[350px] h-[220px] bg-[#1c1c1c];
+  }
+
+  .horizontal-flex {
+    @apply flex h-[85%] flex-row items-center justify-around;
+  }
+
+  .vertical-flex {
+    @apply flex h-full flex-col items-center justify-between gap-5;
+  }
+
+  .page-link {
+    @apply text-primary;
+  }
+
+  .widget:hover {
+    @apply cursor-pointer underline;
+  }
+
+  .copyright-flex {
+    @apply relative flex h-[10%] w-full items-center justify-center;
+  }
+
+  .copyright-sign {
+    @apply m-auto text-center text-primary;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

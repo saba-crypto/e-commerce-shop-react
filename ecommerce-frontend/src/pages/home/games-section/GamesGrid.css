@@ -1,0 +1,30 @@
+@import "../../../index.css";
+
+@layer components {
+  .more-games-grid {
+    @apply mb-24 grid grid-cols-5 gap-y-10;
+  }
+}
+
+@media (max-width: 1330px) {
+  .more-games-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1016px) {
+  .more-games-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 750px) {
+  .more-games-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .more-games-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+}

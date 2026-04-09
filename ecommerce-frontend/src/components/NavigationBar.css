@@ -1,0 +1,77 @@
+.navigation-bar-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  backdrop-filter: blur(1.4px);
+  z-index: 299;
+}
+.reveal-bg {
+  display: block;
+}
+.navigation-bar {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 30px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: clamp(173px, 20vw, 600px);
+  background-color: rgb(29, 29, 29);
+  transform: translateX(-100%);
+  z-index: 300;
+  transition: transform 0.3s;
+}
+.reveal {
+  transform: translateX(0);
+}
+.navigation-bar .title {
+  color: var(--optional-clr);
+  font-size: clamp(1.5rem, 5vw, 1.9rem);
+  font-weight: 600;
+}
+.navigation-bar .link-div {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(49, 49, 49);
+  padding: 5px 0px;
+  border-radius: 15px;
+  column-gap: 15px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.navigation-bar .link-div:hover {
+  background-color: rgb(60, 60, 60);
+}
+.selected {
+  background: var(--gradient-clr);
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Disable hover animations on small screens */
+@media (max-width: 520px) {
+  .navigation-bar .link-div:hover {
+    background-color: rgb(49, 49, 49);
+  }
+}
+.navigation-bar .link-div img {
+  width: 30px;
+  margin-left: 10px;
+}
+.navigation-bar .link {
+  width: 80%;
+  column-gap: 10px;
+
+  color: var(--optional-clr);
+  font-size: 1.3rem;
+  padding: 10px 0px;
+}

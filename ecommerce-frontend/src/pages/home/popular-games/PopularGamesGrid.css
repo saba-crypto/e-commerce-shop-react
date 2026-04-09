@@ -1,0 +1,20 @@
+@import "../../../index.css";
+
+@layer components {
+  .popular-games-segment {
+    @apply grid grid-cols-4 gap-y-10;
+  }
+}
+
+@media (max-width: 1150px) {
+  .popular-games-segment {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .popular-games-segment {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+}

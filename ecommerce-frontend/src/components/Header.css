@@ -1,0 +1,87 @@
+@import "../index.css";
+@layer components {
+  .login-button {
+    @apply relative z-1 box-border flex h-[50px] w-full max-w-[200px] min-w-[100px] cursor-pointer items-center justify-center rounded-[10px] border-[2px] border-solid border-accent bg-transparent text-sm font-semibold whitespace-nowrap text-optional duration-[0.15s];
+  }
+
+  .login-button::before {
+    @apply absolute top-0 right-[50%] left-[50%] z-[-1] h-full rounded-[5px] bg-accent opacity-0 duration-[0.3s] content-[''];
+  }
+
+  .login-button:hover::before {
+    @apply right-0 left-0 opacity-100;
+  }
+
+  .login-button::after {
+    @apply m-0 h-0 w-0 translate-x-[3px] bg-[url(Images/Icons/log-in.png)] bg-contain bg-no-repeat align-middle opacity-0 duration-300 content-[''];
+  }
+
+  .login-button:hover::after {
+    @apply ml-1 inline-block h-[50%] w-[30%] translate-x-0 opacity-100;
+  }
+  .login-button:active {
+    @apply opacity-75;
+  }
+}
+@media (max-width: 750px) {
+  .home:hover {
+    text-shadow: none;
+  }
+  .profile-picture-div:hover .tooltip {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  .cart-icon-div:hover .tooltip {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  .log-in-button:hover::before {
+    opacity: 0;
+    left: 50%;
+    right: 50%;
+  }
+  .log-in-button:hover::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateX(3px);
+    margin: 0;
+    margin-left: 0;
+  }
+  .search-bar::placeholder {
+    font-size: 18px;
+  }
+  .header .log-in-button {
+    padding: 16px 20px;
+  }
+  .header .right-segment {
+    max-width: 200px;
+  }
+  .header .middle-segment {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .header .menu-icon {
+    margin: 0px 10px;
+  }
+  .header .home {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .header .right-segment {
+    justify-content: space-around;
+    width: 33%;
+    margin: 0;
+  }
+  .header .log-in-button,
+  .log-in-div,
+  .log-in-button::after,
+  .log-in-button::before {
+    display: none;
+  }
+  .home:hover {
+    text-shadow: none;
+  }
+}

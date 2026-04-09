@@ -1,0 +1,155 @@
+.product-image {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: clamp(100px, 100%, 220px);
+  box-sizing: border-box;
+}
+
+.product-image-div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 33.3%;
+  box-sizing: border-box;
+}
+
+.product-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  height: 93%;
+  column-gap: 15px;
+}
+
+.order-info {
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  height: 100%;
+  width: 33.3%;
+}
+
+.product-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+  background-color: var(--accent-clr);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.product-description div {
+  display: inline-block;
+  color: black;
+}
+
+.arrival-text {
+  color: black;
+  text-align: center;
+}
+
+.progress-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.progress-status-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress-bar {
+  height: 25px;
+  border-radius: 15px;
+  width: 80%;
+  background-color: var(--secondary-clr);
+  border: solid var(--accent-clr) 3px;
+  overflow: hidden;
+}
+
+.progress-status {
+  transition-duration: 0.3s;
+  border-radius: 50px;
+  height: 100%;
+  background-color: var(--primary-clr);
+  width: 35%;
+}
+
+.buy-again-div {
+  display: flex;
+  justify-content: center;
+  width: 33.3%;
+}
+
+.buy-again-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--optional-clr);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: var(--secondary-clr);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.buy-again-button:hover {
+  opacity: 0.8;
+}
+
+.buy-again-button:active {
+  opacity: 0.6;
+}
+
+.buy-it-again-image {
+  width: 30px;
+  margin-right: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 520px) {
+  .buy-again-button:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 740px) {
+  .product-order {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .product-image-div {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .order-info {
+    width: 95%;
+    row-gap: 5px;
+  }
+
+  .buy-again-div {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .buy-again-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  padding: 100px 10px 10px 10px;
+  column-gap: 30px;
+}
+@media (max-width: 1085px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+}

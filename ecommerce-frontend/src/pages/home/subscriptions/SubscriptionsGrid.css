@@ -1,0 +1,13 @@
+@import "../../../index.css";
+
+@layer components {
+  .subscriptions-grid {
+    @apply mb-24 grid w-full grid-cols-3 content-center justify-evenly gap-y-12 bg-[#2a2a2a] py-24;
+  }
+}
+
+@media (max-width: 1150px) {
+  .subscriptions-grid {
+    grid-template-columns: 1fr;
+  }
+}

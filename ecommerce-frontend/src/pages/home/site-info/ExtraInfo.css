@@ -1,0 +1,52 @@
+@import "../../../index.css";
+
+@layer components {
+  .about-us-image {
+    @apply h-[285px] w-[285px] rounded-lg object-cover;
+  }
+
+  .about-us-container {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .about-us-text-div {
+    @apply mx-12.5 max-w-[600px] rounded-lg bg-primary p-[35px_25px];
+  }
+
+  .about-us-text {
+    @apply m-0 text-2xl leading-[35px] text-black;
+  }
+
+  .more-about-us-div {
+    @apply mb-12.5 flex items-center justify-center;
+  }
+
+  .more-about-us-text {
+    @apply m-0 mb-[30px] rounded-lg bg-primary p-[30px] text-4xl text-black;
+  }
+}
+
+@media (max-width: 1016px) {
+  .about-us-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-us-text {
+    font-size: 25px;
+  }
+}
+@media (max-width: 750px) {
+  .about-us-image {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+  }
+}
+@media (max-width: 520px) {
+  .about-us-text-div {
+    margin: 0px 20px;
+  }
+  .about-us-text {
+    font-size: 22px;
+  }
+}

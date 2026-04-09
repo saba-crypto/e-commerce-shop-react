@@ -1,0 +1,107 @@
+@import "../../../index.css";
+
+@layer components {
+  .subscription-card {
+    @apply inline-block w-[85%] justify-self-center rounded-xl bg-optional text-black transition-transform duration-200;
+  }
+
+  .subscription-card p {
+    @apply m-0;
+  }
+
+  .subscription-card:hover {
+    @apply scale-101 shadow-[5px_5px_9px_rgba(0,0,0,0.2)];
+  }
+
+  .card-header {
+    @apply flex flex-col items-center justify-center rounded-t-xl bg-primary py-5;
+  }
+
+  .card-header .price {
+    @apply mb-1 text-6xl font-semibold;
+  }
+
+  .card-header .secondary-info {
+    @apply text-2xl font-normal text-black opacity-50;
+  }
+  .subscription-card .idk-what-to-call-this-thing {
+    @apply text-4xl font-light text-black opacity-50;
+  }
+  .subscription-card .main-content {
+    @apply flex flex-col justify-center gap-5 p-5;
+  }
+
+  .list_item {
+    @apply flex items-center;
+  }
+
+  .x-mark,
+  .checkmark {
+    @apply mr-1.5 text-2xl;
+  }
+
+  .x-mark {
+    @apply text-red-600;
+  }
+
+  .checkmark {
+    @apply text-green-600;
+  }
+
+  .buy-now-button-div {
+    @apply flex items-center justify-center py-4;
+  }
+
+  .buy-now-button {
+    @apply w-[80%] rounded-full border-4 border-accent bg-transparent px-10 py-3 text-2xl font-medium text-accent transition-all duration-170 hover:cursor-pointer hover:bg-accent hover:text-white active:opacity-80;
+  }
+}
+
+@media (max-width: 1150px) {
+  .subscription-card {
+    max-width: 50%;
+    min-width: 420px;
+  }
+}
+
+@media (max-width: 520px) {
+  .subscription-card {
+    min-width: 70%;
+  }
+  .subscription-card .main-content,
+  .subscription-card .header {
+    padding: 10px 20px;
+  }
+  .subscription-card .header .price {
+    font-size: 50px;
+  }
+  .subscription-card .header .price span {
+    font-size: 30px;
+  }
+  .subscription-card .header .secondary-info {
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
+
+  .subscription-card .main-content .benefit,
+  .lose {
+    font-size: 17px;
+  }
+  .buy-now-button {
+    font-size: 18px;
+    text-wrap: nowrap;
+    padding: 20px 40px;
+  }
+
+  .subscription-card:hover {
+    scale: none;
+    box-shadow: none;
+  }
+  .buy-now-button:hover {
+    color: var(--accent-clr);
+    background-color: initial;
+    cursor: pointer;
+    animation: none;
+    animation-direction: none;
+  }
+}

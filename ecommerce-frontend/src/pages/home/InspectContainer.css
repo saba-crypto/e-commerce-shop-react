@@ -1,0 +1,135 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+  z-index: 250;
+}
+
+.inspect-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 10px;
+  width: clamp(200px, 80%, 600px);
+  padding: 10px;
+  background-color: var(--secondary-clr);
+  border-radius: 8px;
+  z-index: 300;
+}
+.close-button {
+  filter: saturate(150%);
+  width: 45px;
+  position: absolute;
+  top: -4%;
+  right: -4%;
+  cursor: pointer;
+}
+.inspect-container .inspect-game-name-div {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.inspect-container .image {
+  width: 40%;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: var(--optional-clr);
+}
+.inspect-container .body {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+.game-sub {
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.7rem, calc(12px + 1vw), 1.6rem);
+  font-weight: 600;
+}
+.inspect-container .game-info {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #00cc25;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  width: 100%;
+}
+.inspect-container .game-info .icon {
+  width: 55px;
+}
+.inspect-add-to-cart {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  background: linear-gradient(to right, rgb(128, 0, 255), var(--accent-clr));
+  border: none;
+  font-size: 1.6rem;
+  height: 60px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+.inspect-add-to-cart::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  background-image: url(/Images/Icons/add_shopping_cart_27dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png);
+  background-repeat: no-repeat;
+  transform: translateX(10px);
+  transition-duration: 0.15s;
+}
+.inspect-add-to-cart:hover::after {
+  transform: translateX(0px);
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+}
+.inspect-add-to-cart:active {
+  opacity: 0.8;
+}
+.add-to-cart-icon {
+  width: 30px;
+}
+
+/* Disable hover animations on small screens */
+@media (max-width: 520px) {
+  .inspect-add-to-cart:hover::after {
+    transform: translateX(10px);
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inspect-container {
+    width: 60%;
+    flex-direction: column;
+  }
+  .inspect-container .body {
+    width: 100%;
+  }
+  .inspect-container .image {
+    align-self: center;
+  }
+  .inspect-container .image {
+    object-fit: cover;
+  }
+}
+@media (max-width: 450px) {
+  .inspect-container {
+    width: 70%;
+  }
+}
